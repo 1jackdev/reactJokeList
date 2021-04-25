@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Joke from "./Joke";
+import OldJoke from "./OldJoke";
 import "./JokeList.css";
 
 function JokeList({ numJokesToGet = 10 }) {
@@ -61,7 +61,7 @@ function JokeList({ numJokesToGet = 10 }) {
         </button>
   
         {sortedJokes.map(j => (
-          <Joke text={j.joke} key={j.id} id={j.id} votes={j.votes} vote={vote} />
+          <OldJoke text={j.joke} key={j.id} id={j.id} votes={j.votes} vote={vote} />
         ))}
       </div>
     );
